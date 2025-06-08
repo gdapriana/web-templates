@@ -1,0 +1,85 @@
+@use "../../sass" as v
+
+:root
+  --colors: orange
+  --color2: #eaeaea
+  --color3: #eaeaea
+  --primtext: "Afacad", san-serif
+
+#_products-1
+  @include v.section-init()
+
+  ._wrapper
+    @include v.flx($d: column)
+
+    ._content
+      display: grid
+      grid-template-columns: 1fr
+      gap: clamp(1rem, 2vw, 3rem)
+      @media (min-width: v.$responsive-sm)
+        grid-template-columns: repeat(2, 1fr)
+      @media (min-width: v.$responsive-lg)
+        grid-template-columns: repeat(3, 1fr)
+
+      ._card
+        background-color: white
+        border-radius: 1rem
+        overflow: hidden
+        @include v.trans()
+        box-shadow: 4px 4px 10px #00000010, -4px -4px 10px #00000010
+        @include v.flx($d: column, $j: start, $i: stretch)
+
+        ._image
+          overflow: hidden
+          img
+            width: 100%
+            @include v.trans()
+
+        ._content
+          padding: clamp(1rem, 2vw, 2rem)
+          @include v.flx($d: column, $j: start, $i: start, $g: 1rem)
+
+          ._location
+            @include v.text-format($fs: v.$text-sm)
+
+          ._title
+            @include v.text-format($fs: v.$text-lg, $fw: 700)
+
+          ._stars
+            @include v.flx($g: .2rem)
+            i
+              color: orange
+
+          ._description
+            @include v.text-format($fs: v.$text-base, $cl: v.$text-sub-col)
+            @include v.line-clamp(3)
+
+          ._line
+            margin-top: 1rem
+            width: 100%
+            border-color: rgba(0, 0, 0, 0.1)
+
+          ._price-cta
+            width: 100%
+            @include v.flx($d: column, $g: 1rem)
+            @media (min-width: v.$responsive-sm)
+              @include v.flx($j: space-between)
+
+            ._price
+              text-align: center
+              @media (min-width: v.$responsive-sm)
+                text-align: start
+
+              @include v.text-format()
+
+              span
+                @include v.text-format($fs: v.$text-lg, $fw: bold, $cl: var(--colors))
+
+            ._cta
+              @include v.text-format($cl: white, $fw: 500)
+              background-color: var(--colors)
+              @include v.button()
+        &:hover
+          ._image
+            img
+              transform: scale(1.1)

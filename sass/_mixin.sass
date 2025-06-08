@@ -1,6 +1,56 @@
+@use "variables" as v
+
+@mixin format()
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
 @mixin flx($j: center, $i: center, $g: 0, $d: row)
-    display: flex
-    justify-content: $j
-    align-items: $i
-    gap: $g
-    flex-direction: $d
+  display: flex
+  justify-content: $j
+  align-items: $i
+  gap: $g
+  flex-direction: $d
+
+@mixin section-init($px1: 0, $py1: 5rem, $px2: 7%, $py2: 0, $bc: var(--colors))
+  width: 100%
+  background-color: $bc
+  padding: $py1 $px1
+  @include flx()
+  ._wrapper
+    width: 100%
+    padding: $py2 $px2
+
+@mixin text-format($fm: var(--primtext), $fw: 400, $fs: v.$text-base, $ls: 0, $cl: v.$text-main-col)
+  font-family: $fm, sans-serif
+  font-weight: $fw
+  font-size: $fs
+  letter-spacing: $ls
+  color: $cl
+
+@mixin line-clamp($c: 2)
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: $c
+  overflow: hidden
+
+@mixin trans($d: 500ms)
+  transition: all ease-in-out $d
+
+@mixin button($size: default, $br: 999em)
+  cursor: pointer
+  border-radius: $br
+  border: 1px solid var(--colors)
+  @include trans()
+  &:hover
+    background-color: white
+    color: var(--colors)
+  @if $size == small
+    padding: .4rem 1rem
+  @else if $size == default
+    padding: .6rem 1.2rem
+  @else if $size == large
+    padding: .8rem 1.6rem
+  @else
+    @error "Unknown direction #{$size}."
+

@@ -1,0 +1,14 @@
+#_slider-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+}
+#_slider-1 ._wrapper {
+  width: 100%;
+  padding: 0 7%;
+}
+
+/*# sourceMappingURL=slider-1.css.map */

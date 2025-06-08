@@ -1,0 +1,169 @@
+:root {
+  --colors: orange;
+  --color2: #eaeaea;
+  --color3: #eaeaea;
+  --primtext: "Afacad", san-serif;
+}
+
+#_products-1 {
+  width: 100%;
+  background-color: var(--colors);
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+}
+#_products-1 ._wrapper {
+  width: 100%;
+  padding: 0 7%;
+}
+#_products-1 ._wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: column;
+}
+#_products-1 ._wrapper ._content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2vw, 3rem);
+}
+@media (min-width: 576px) {
+  #_products-1 ._wrapper ._content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  #_products-1 ._wrapper ._content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#_products-1 ._wrapper ._content ._card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all ease-in-out 500ms;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.062745098), -4px -4px 10px rgba(0, 0, 0, 0.062745098);
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  gap: 0;
+  flex-direction: column;
+}
+#_products-1 ._wrapper ._content ._card ._image {
+  overflow: hidden;
+}
+#_products-1 ._wrapper ._content ._card ._image img {
+  width: 100%;
+  transition: all ease-in-out 500ms;
+}
+#_products-1 ._wrapper ._content ._card ._content {
+  padding: clamp(1rem, 2vw, 2rem);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  flex-direction: column;
+}
+#_products-1 ._wrapper ._content ._card ._content ._location {
+  font-family: var(--primtext), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+#_products-1 ._wrapper ._content ._card ._content ._title {
+  font-family: var(--primtext), sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+#_products-1 ._wrapper ._content ._card ._content ._stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  flex-direction: row;
+}
+#_products-1 ._wrapper ._content ._card ._content ._stars i {
+  color: orange;
+}
+#_products-1 ._wrapper ._content ._card ._content ._description {
+  font-family: var(--primtext), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+#_products-1 ._wrapper ._content ._card ._content ._line {
+  margin-top: 1rem;
+  width: 100%;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+#_products-1 ._wrapper ._content ._card ._content ._price-cta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  #_products-1 ._wrapper ._content ._card ._content ._price-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    flex-direction: row;
+  }
+}
+#_products-1 ._wrapper ._content ._card ._content ._price-cta ._price {
+  text-align: center;
+  font-family: var(--primtext), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+@media (min-width: 576px) {
+  #_products-1 ._wrapper ._content ._card ._content ._price-cta ._price {
+    text-align: start;
+  }
+}
+#_products-1 ._wrapper ._content ._card ._content ._price-cta ._price span {
+  font-family: var(--primtext), sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0;
+  color: var(--colors);
+}
+#_products-1 ._wrapper ._content ._card ._content ._price-cta ._cta {
+  font-family: var(--primtext), sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0;
+  color: white;
+  background-color: var(--colors);
+  cursor: pointer;
+  border-radius: 999em;
+  border: 1px solid var(--colors);
+  transition: all ease-in-out 500ms;
+  padding: 0.6rem 1.2rem;
+}
+#_products-1 ._wrapper ._content ._card ._content ._price-cta ._cta:hover {
+  background-color: white;
+  color: var(--colors);
+}
+#_products-1 ._wrapper ._content ._card:hover ._image img {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=products-1.css.map */
